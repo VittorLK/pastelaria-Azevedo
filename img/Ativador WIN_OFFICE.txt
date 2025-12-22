@@ -1,0 +1,18 @@
+✅ Como Ativar o Windows ou o Office via PowerShell
+
+1️⃣ Abra o PowerShell como Administrador
+
+2️⃣ Copie e cole o comando abaixo, conforme a versão do seu Windows:
+
+🟦 Para Windows 8, 10 e 11:
+
+irm https://get.activated.win | iex
+
+
+🟫 Para Windows 7 e versões mais antigas:
+
+iex ((New-Object Net.WebClient).DownloadString('https://get.activated.win'))
+
+3️⃣ Escolha a opção desejada no menu que será exibido:
+1 - Ativar o Windows
+2 - Ativar o Microsoft Office
