@@ -15,7 +15,8 @@
     text-decoration: none;
     transition: 0.2s linear;
 }
-.html body{
+
+.html body {
     overflow-x: hidden;
 }
 
@@ -30,22 +31,26 @@ section {
     max-width: none;
 }
 
-.menu {
-    background: var(--secundario);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-}
-
+.menu { background: var(--preto); 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 100; 
+    width: 100%; }  
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* Coloca os itens em linha */
     padding: 0.8rem 2rem;
-    max-width: 1200px;
+    max-width: 100%;
+    /* Garante que o header ocupe toda a tela */
     margin: 0 auto;
+    width: 100%;
+    /* Garante que ocupe 100% da largura da tela */
+    background: var(--preto);
+    /* Alinha o fundo preto em toda a largura */
 }
 
 .logo img {
@@ -106,7 +111,7 @@ section {
 }
 
 .home {
-    
+
     padding: 80px 20px;
     width: 100vw;
 }
@@ -115,7 +120,8 @@ section {
     color: var(--branco);
     text-align: center;
 }
-.conteudo-logo{
+
+.conteudo-logo {
     width: 300px;
     height: 300px;
     box-shadow: 0 0 20px var(--primario);
@@ -136,10 +142,11 @@ section {
     padding: 1rem 0;
     color: var(--branco);
 }
-.conteudo p span{
-    color:#F4C430;
-    font-weight:bold;
-    
+
+.conteudo p span {
+    color: #F4C430;
+    font-weight: bold;
+
 }
 
 @media (max-width: 768px) {
@@ -165,11 +172,11 @@ section {
     }
 
     .navpastel {
-        
+
         display: flex;
         flex-direction: column;
         gap: 10px;
-    
+
     }
 
     .conteudo h3 {
@@ -180,7 +187,9 @@ section {
         font-size: 1.5rem;
     }
 }
+
 @media (max-width: 768px) {
+
     .home-coteiner,
     .home {
         flex-direction: column;
@@ -202,17 +211,18 @@ section {
     }
 }
 
-.title{
+.title {
     font-size: 3.5rem;
-    background:var(--branco) ;
+    background: var(--branco);
     color: var(--preto);
     text-align: center;
     margin-bottom: 2rem;
 }
+
 .row p {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-top: 30px;
     font-size: 1.2rem;
@@ -223,10 +233,10 @@ section {
 
 .subtitulo {
     display: block;
-    width: 100%; 
-    clear: both; 
-    font-size: 1.5rem; 
-    font-weight: 400;    
+    width: 100%;
+    clear: both;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: var(--preto);
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -234,6 +244,7 @@ section {
     padding-top: 10px;
     padding-right: 10;
 }
+
 .comidas {
     width: 40px;
     height: auto;
@@ -253,18 +264,20 @@ section {
     border: 1px solid var(--cinza);
     padding: 2rem;
     border-radius: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
+
 .box-top {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
-     justify-content: space-between
+    justify-content: space-between
 }
+
 .box-top .info {
     flex: 1;
 }
@@ -273,16 +286,19 @@ section {
     font-weight: bold;
     white-space: nowrap;
 }
+
 .sabor {
-    font-weight: bold;   
+    font-weight: bold;
     font-size: 1.2rem;
-    margin: 0;              
+    margin: 0;
 }
+
 .descricao {
-    color:var(--preto);           
+    color: var(--preto);
     font-size: 0.9rem;
     margin: 0;
 }
+
 @media (max-width: 600px) {
     .cardapio .box-container {
         grid-template-columns: 1fr;
@@ -299,9 +315,10 @@ section {
 }
 
 .endereco {
-     padding: 0;
-    
+    padding: 0;
+
 }
+
 .endereco-box {
     background: var(--cinza);
     width: 100vw;
@@ -317,7 +334,7 @@ section {
     display: inline-block;
     border-radius: 1rem;
     margin-bottom: 4rem;
-    background: none; 
+    background: none;
 }
 
 .endereco iframe {
@@ -325,9 +342,10 @@ section {
     max-width: 1100px;
     height: 450px;
     border-radius: 2.5rem;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
 }
+
 @media (max-width: 768px) {
     .endereco iframe {
         height: 300px;
@@ -443,14 +461,13 @@ section {
 }
 
 .contatos .logo.instagram {
-    background: linear-gradient(
-        135deg,
-        #f58529,
-        #dd2a7b,
-        #8134af,
-        #515bd4
-    );
+    background: linear-gradient(135deg,
+            #f58529,
+            #dd2a7b,
+            #8134af,
+            #515bd4);
 }
+
 @media (max-width: 768px) {
     .contatos-icons {
         flex-direction: column;
@@ -470,53 +487,345 @@ section {
         font-size: 14px;
     }
 }
-/* =====================
-   BOTÃO MENU MOBILE
-===================== */
+
+
 .menu-btn {
-    display: none;
-    background: none;
-    color: var(--preto);
-    font-size: 2.6rem;
+    display: none;:root {
+    --primario: #F4C430;
+    --secundario: #0E0E0E;
+    --branco: #ffffff;
+    --cinza: #2a2a2a;
+    --preto: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+body {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+.menu {
+    background: var(--preto);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: var(--preto);
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.navpastel {
+    display: flex;
+    gap: 1.5rem;
+    
+}
+
+.navpastel a {
+    font-size: 1.8rem;
+    color: var(--branco);
+}
+
+.navpastel a:hover {
+    color: var(--primario);
+    border-bottom: 0.1rem solid var(--primario);
+    padding-bottom: 0.5rem;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    margin: 1rem;
     cursor: pointer;
 }
 
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
 
-   MENU RESPONSIVO
-===================== */
+
+.menu-btn{
+    display: none;
+    background: none;
+    color: var(--branco);
+    font-size: 2.8rem;
+    cursor: pointer;}
+
+/* Mobile */
 @media (max-width: 768px) {
 
     .menu-btn {
         display: block;
     }
 
-    /* mantém tudo alinhado */
-    .header {
-        flex-direction: row;
-    }
-
-    /* ESCONDE menu */
+   
     .navpastel {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--secundario);
-
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-
-        padding: 2rem 0;
         display: none;
+        width: 100%;
+        background: linear-gradient(180deg, #0b1630, #0a1225);
+        flex-direction: column;
+        padding: 1.5rem 2rem;
     }
 
-    /* MOSTRA menu ao clicar */
+    /* Mostra ao clicar */
     .navpastel.active {
         display: flex;
     }
 
     .navpastel a {
+        padding: 1rem 0;
         font-size: 1.6rem;
+        text-align: left;
+    }
+}
+
+
+
+/* Conteúdo */
+.home-coteiner {
+    background: linear-gradient(135deg, var(--preto) 0%, var(--cinza) 100%);
+    display: flex;
+    padding: 80px 20px;
+    width: 100vw;
+    align-items: center;
+}
+
+.home {
+    padding: 80px 20px;
+    width: 100vw;
+}
+
+.conteudo {
+    color: var(--branco);
+    text-align: center;
+}
+
+.conteudo-logo {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 20px var(--primario);
+    border-radius: 50%;
+    border: 4px solid var(--primario);
+}
+
+.conteudo h3 {
+    font-size: 4.5rem;
+    color: var(--primario);
+    margin-bottom: 2rem;
+}
+
+.conteudo p {
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: var(--branco);
+}
+
+.conteudo p span {
+    color: #F4C430;
+    font-weight: bold;
+}
+
+/* Ajustes de layout para telas pequenas */
+@media (max-width: 768px) {
+    .home-coteiner, .home {
+        flex-direction: column;
+        padding: 100px 15px 40px;
+        width: 100%;
+    }
+
+    .conteudo-logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .conteudo h3 {
+        font-size: 2.8rem;
+    }
+
+    .conteudo p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Ajuste de layout para dispositivos móveis */
+.title {
+    font-size: 3.5rem;
+    background: var(--branco);
+    color: var(--preto);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Subtítulo */
+.subtitulo {
+    display: block;
+    width: 100%;
+    clear: both;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--preto);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+/* Box de produtos */
+.comidas {
+    width: 40px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.cardapio .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.cardapio .box-container .box {
+    background: #fff;
+    font-size: 1.6rem;
+    border: 1px solid var(--cinza);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.box-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.box-top .info {
+    flex: 1;
+}
+
+.box-top .preco {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.sabor {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.descricao {
+    color: var(--preto);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .cardapio .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .box-top {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .preco {
+        align-self: flex-start;
+    }
+}
+
+/* Finalização do layout de contato e footer */
+.contatos-icons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.contatos .logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.contatos .logo:hover {
+    transform: translateY(-8px);
+}
+
+.contatos .logo img {
+    width: 55px;
+    margin-bottom: 12px;
+}
+
+.logo span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.contatos .logo.whatsapp {
+    background-color: #25d366;
+}
+
+.contatos .logo.instagram {
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+@media (max-width: 768px) {
+    .contatos-icons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contatos .logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .contatos .logo img {
+        width: 45px;
+    }
+
+    .logo span {
+        font-size: 14px;
     }
 }
