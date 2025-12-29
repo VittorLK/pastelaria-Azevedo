@@ -300,7 +300,7 @@ section {
 .contatos-box {
     background-color: var(--primario);
     width: 100vw;
-    padding: 80px 20px;
+    padding: 40px 20px 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -597,5 +597,19 @@ section {
     background: #F4C430; /* amarelo pastelaria */
     color: #000;
     cursor: pointer;
+    font-weight: bold;
+}
+/* Rodapé */
+.rodape {
+    width: 100vw;
+    background: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.rodape .autor {
+    color: var(--primario);
     font-weight: bold;
 }
