@@ -79,6 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         totalCarrinho.innerText = total.toFixed(2);
         contadorCarrinho.innerText = quantidadeTotal;
+
+        // ===== MUDANÇA DE COR DO CONTADOR =====
+        if (quantidadeTotal > 0) {
+            contadorCarrinho.classList.add('ativo');
+        } else {
+            contadorCarrinho.classList.remove('ativo');
+        }
     }
 
     // =========================
@@ -104,7 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             atualizarCarrinho();
-            mostrarToast(); // 👈 AVISO
+            mostrarToast();
+
+            // ===== ANIMAÇÃO DO CONTADOR =====
+            contadorCarrinho.classList.add('animar');
+            setTimeout(() => {
+                contadorCarrinho.classList.remove('animar');
+            }, 300);
         });
     });
 
@@ -172,11 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-//função temporaria de alerte//
 
+//função temporaria de alerte//
 function fecharAlerta() {
     document.getElementById("alertDelivery").style.display = "none";
 }
-
-
-

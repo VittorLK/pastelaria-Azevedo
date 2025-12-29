@@ -14,7 +14,6 @@
     box-sizing: border-box;
     text-decoration: none;
     transition: 0.2s linear;
-   
 }
 
 body {
@@ -78,6 +77,7 @@ section {
     display: flex;
     align-items: center;
     color: var(--branco);
+    position: relative;
 }
 
 .icons img {
@@ -90,6 +90,46 @@ section {
 .icons img:hover {
     width: 35px;
     height: 35px;
+}
+
+/* Contador do carrinho */
+#contador-carrinho {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--branco);
+    color: var(--preto);
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Estado ativo - Amarelo */
+#contador-carrinho.ativo {
+    background: var(--primario);
+    color: var(--preto);
+    transform: scale(1.2);
+    box-shadow: 0 0 15px var(--primario);
+}
+
+/* Animação ao adicionar */
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+#contador-carrinho.animar {
+    animation: pulsar 0.3s ease;
 }
 
 /* Botão do menu mobile */
@@ -158,25 +198,18 @@ section {
 }
 
 .conteudo p {
-    
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.8;
     padding: 1rem 0;
     color: var(--branco);
-
 }
-.conteudo p span {
-    color: #F4C430;
-    font-weight: bold;
-
-}
-
 
 .conteudo p span {
     color: var(--primario);
     font-weight: bold;
 }
+
 .row p {
     display: flex;
     flex-direction: column;
@@ -185,9 +218,10 @@ section {
     margin-top: 30px;
     font-size: 1.2rem;
     color: var(--preto);
-    padding: 1.5ren 0;
+    padding: 1.5rem 0;
     line-height: 1.8;
 }
+
 /* Títulos */
 .title {
     font-size: 3.5rem;
@@ -378,12 +412,142 @@ section {
     background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
 
+/* Modal Carrinho */
+.modal-carrinho {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-conteudo {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.modal-conteudo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-conteudo li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.total {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-fechar {
+    background: #ccc;
+}
+
+/* Botões do carrinho menores */
+.acoes .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    line-height: 1.2;
+}
+
+/* Botão fechar ainda mais compacto */
+.acoes .btn-fechar {
+    padding: 6px 10px;
+    font-size: 13px;
+    background: #ccc;
+}
+
+#observacoes {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-family: inherit;
+}
+
+#toast-carrinho {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #28a745;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+    z-index: 9999;
+}
+
+#toast-carrinho.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Função temporaria de alerta */
+.alert-delivery {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.alert-delivery button {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    background: var(--primario);
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.rodape {
+    width: 100vw;
+    background: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.rodape .autor {
+    color: var(--primario);
+    font-weight: bold;
+}
+
 /* Media Queries - Mobile */
 @media (max-width: 768px) {
     .menu-btn {
         display: block;
         margin-left: auto;
-        
     }
 
     .navpastel {
@@ -401,11 +565,12 @@ section {
     .navpastel.active {
         display: flex;
     }
+
     .navpastel a.active,
     .navpastel a:focus {
-    color: var(--primario);
-    border-bottom: 0.2rem solid var(--primario);
-}
+        color: var(--primario);
+        border-bottom: 0.2rem solid var(--primario);
+    }
 
     .navpastel a {
         padding: 1rem 0;
@@ -415,14 +580,14 @@ section {
     }
 
     .icons img {
-        width: 24px;
-        height: 24px;
+        width: 30px;
+        height: 30px;
         margin: 0 0.3rem;
     }
 
     .icons img:hover {
-        width: 28px;
-        height: 28px;
+        width: 35px;
+        height: 35px;
     }
 
     .home-coteiner,
@@ -484,132 +649,4 @@ section {
     .preco {
         align-self: flex-start;
     }
-}
-
-.modal-carrinho {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.modal-conteudo {
-    background: #fff;
-    padding: 20px;
-    width: 90%;
-    max-width: 400px;
-    border-radius: 10px;
-}
-
-.modal-conteudo ul {
-    list-style: none;
-    padding: 0;
-}
-
-.modal-conteudo li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-
-.total {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.acoes {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.btn-fechar {
-    background: #ccc;
-}
-
-/* Botões do carrinho menores */
-.acoes .btn {
-    padding: 6px 12px;   /* reduz altura e largura */
-    font-size: 14px;     /* texto menor */
-    border-radius: 6px;
-    line-height: 1.2;
-}
-
-/* Botão fechar ainda mais compacto */
-.acoes .btn-fechar {
-    padding: 6px 10px;
-    font-size: 13px;
-    background: #ccc;
-}
-
-#observacoes {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    resize: none;
-    font-family: inherit;
-}
-
-#toast-carrinho {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #28a745;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(10px);
-    z-index: 9999;
-}
-
-#toast-carrinho.mostrar {
-    opacity: 1;
-    transform: translateY(0);
-}
-/*função temporaria de alerta*/
-.alert-delivery {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #000;
-    color: #fff;
-    padding: 2rem 3rem;
-    border-radius: 1rem;
-    text-align: center;
-    z-index: 9999;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-.alert-delivery button {
-    margin-top: 1.5rem;
-    padding: 0.6rem 1.5rem;
-    border-radius: 0.5rem;
-    background: #F4C430; /* amarelo pastelaria */
-    color: #000;
-    cursor: pointer;
-    font-weight: bold;
-}
-/* Rodapé */
-.rodape {
-    width: 100vw;
-    background: var(--preto);
-    color: var(--branco);
-    text-align: center;
-    padding: 1.5rem 1rem;
-    font-size: 1.2rem;
-}
-
-.rodape .autor {
-    color: var(--primario);
-    font-weight: bold;
 }
