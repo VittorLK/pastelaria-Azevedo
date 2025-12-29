@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // =========================
     // MENU MOBILE
     // =========================
@@ -167,5 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+//função temporaria de alerte//
+
+function fecharAlerta() {
+    document.getElementById("alertDelivery").style.display = "none";
+}
+
 
 

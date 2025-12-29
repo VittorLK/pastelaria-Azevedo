@@ -8,47 +8,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
-    
+
     <title>Pastelaria Azevedo</title>
 </head>
 
 <body>
-        <header class="menu">
-    <section class="header">
-        <a href="#" class="logo">
-            <img src="img/logo-pastelaria-azevedo-vetor.png" alt="logo">
-        </a>
+    <header class="menu">
+        <section class="header">
+            <a href="#" class="logo">
+                <img src="img/logo-pastelaria-azevedo-vetor.png" alt="logo">
+            </a>
 
-        <!-- Botão de menu -->
-        <button class="menu-btn" aria-label="Abrir menu" id="menu-btn">☰</button>
+            <!-- Botão de menu -->
+            <button class="menu-btn" aria-label="Abrir menu" id="menu-btn">☰</button>
 
-        <!-- Menu (navpastel) -->
-        <nav class="navpastel" id="navpastel">
-            <a href="#home">Home</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#endereco">Endereço</a>
-            <a href="#contatos">Contatos</a>
-        </nav>
+            <!-- Menu (navpastel) -->
+            <nav class="navpastel" id="navpastel">
+                <a href="#home">Home</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#endereco">Endereço</a>
+                <a href="#contatos">Contatos</a>
+            </nav>
 
-        <!-- Ícones das redes sociais (se você tiver) -->
-        <div class="icons">
-            <!-- seus ícones aqui -->
-        </div>
+            <!-- Ícones das redes sociais (se você tiver) -->
+            <div class="icons">
+                <!-- seus ícones aqui -->
+            </div>
 
-   <!-- CARRINHO -->
-        <a href="#" class="icons" id="abrir-carrinho">
-    <img src="img/icons8-carrinho-30.png" alt="carrinho">
-    <span id="contador-carrinho">0</span>
-</a>
-
-
-    </section>
-</header>
+            <!-- CARRINHO -->
             <a href="#" class="icons" id="abrir-carrinho">
                 <img src="img/icons8-carrinho-30.png" alt="carrinho">
+                <span id="contador-carrinho">0</span>
             </a>
+
+
         </section>
+    </header>
+    <a href="#" class="icons" id="abrir-carrinho">
+        <img src="img/icons8-carrinho-30.png" alt="carrinho">
+    </a>
+    </section>
     </header>
 
 
@@ -66,11 +66,18 @@
     <section class="sobre" id="sobre">
         <h2 class="title">Pastelaria Azevedo</h2>
         <div class="row">
-            <p >Nosso propósito é transformar ingredientes selecionados em momentos de satisfação. Com carinho, capricho
+            <p>Nosso propósito é transformar ingredientes selecionados em momentos de satisfação. Com carinho, capricho
                 e respeito, cuidamos de todo o processo da escolha dos insumos ao preparo artesanal. </p>
+        </div>
+        <!--alerta temporaio de sem delivery-->
+        <div class="alert-delivery" id="alertDelivery">
+            ⚠️ No momento não estamos trabalhando com delivery.<br>
+            Retirada somente no estabelecimento.
+            <button onclick="fecharAlerta()">OK</button>
         </div>
 
     </section>
+
 
     <section class="cardapio" id="cardapio">
         <h2 class="title">Cardapio</h2>
@@ -85,8 +92,8 @@
                     </div>
                     <p class="preco">R$ 14,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" 
-                data-nome="Pastel de Carne" data-preco="14"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel de Carne" data-preco="14"> Adicionar ao
+                    carrinho</a>
             </div>
 
             <div class="box">
@@ -98,8 +105,8 @@
                     </div>
                     <p class="preco">R$:13,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Pastel de Frango"
-                data-preco="13"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel de Frango" data-preco="13"> Adicionar ao carrinho
+                </a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -110,8 +117,7 @@
                     </div>
                     <p class="preco">13,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Pastel Kids"
-                data-preco="13"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel Kids" data-preco="13"> Adicionar ao carrinho </a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -122,8 +128,8 @@
                     </div>
                     <p class="preco">19,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Pastel de Queijo"
-                data-preco="19"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel de Queijo" data-preco="19"> Adicionar ao carrinho
+                </a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -134,8 +140,8 @@
                     </div>
                     <p class="preco">20,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Pastel Italiano"
-                data-preco="20"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel Italiano" data-preco="20"> Adicionar ao carrinho
+                </a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -146,8 +152,8 @@
                     </div>
                     <p class="preco">20,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Pastel Qualquer 1"
-                data-preco="20"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel Qualquer 1" data-preco="20"> Adicionar ao
+                    carrinho </a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -158,8 +164,7 @@
                     </div>
                     <p class="preco">R$:8,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Pastel Vento"
-                data-preco="8"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel Vento" data-preco="8"> Adicionar ao carrinho </a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -170,8 +175,8 @@
                     </div>
                     <p class="preco">R$:13,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Pastel de Calabresa"
-                data-preco="13"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel de Calabresa" data-preco="13"> Adicionar ao
+                    carrinho </a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -182,8 +187,7 @@
                     </div>
                     <p class="preco">R$:10,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Banana Real"
-                data-preco="10"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Banana Real" data-preco="10"> Adicionar ao carrinho </a>
             </div>
         </div>
         <p class="subtitulo">Especias</p>
@@ -197,8 +201,7 @@
                     </div>
                     <p class="preco">R$ 10,00</p>
                 </div>
-                <a href="#" class="btn add-carrinho" data-nome="Vegano"
-                data-preco="10"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Vegano" data-preco="10"> Adicionar ao carrinho </a>
             </div>
             <div class="box-container">
                 <div class="box">
@@ -210,8 +213,8 @@
                         </div>
                         <p class="preco">R$ 15,00</p>
                     </div>
-                    <a href="#" class="btn add-carrinho" data-nome="Mexicano"
-                    data-preco="15"> Adicionar ao carrinho </a>
+                    <a href="#" class="btn add-carrinho" data-nome="Mexicano" data-preco="15"> Adicionar ao carrinho
+                    </a>
                 </div>
             </div>
             <div class="box-container">
@@ -225,8 +228,8 @@
                         </div>
                         <p class="preco">R$ 18,00</p>
                     </div>
-                    <a href="#" class="btn add-carrinho" data-nome="Frango c/ Queijo"
-                    data-preco="18"> Adicionar ao carrinho </a>
+                    <a href="#" class="btn add-carrinho" data-nome="Frango c/ Queijo" data-preco="18"> Adicionar ao
+                        carrinho </a>
                 </div>
             </div>
             <div class="box-container">
@@ -240,8 +243,8 @@
                         </div>
                         <p class="preco">R$ 16,00</p>
                     </div>
-                    <a href="#" class="btn add-carrinho" data-nome="Frango c/ CATUPIRY"
-                    data-preco="16"> Adicionar ao carrinho </a>
+                    <a href="#" class="btn add-carrinho" data-nome="Frango c/ CATUPIRY" data-preco="16"> Adicionar ao
+                        carrinho </a>
                 </div>
             </div>
             <div class="box-container">
@@ -255,8 +258,8 @@
                         </div>
                         <p class="preco">R$ 19,00</p>
                     </div>
-                    <a href="#" class="btn add-carrinho" data-nome="Carne C/ CATUPIRY"
-                    data-preco="19"> Adicionar ao carrinho </a>
+                    <a href="#" class="btn add-carrinho" data-nome="Carne C/ CATUPIRY" data-preco="19"> Adicionar ao
+                        carrinho </a>
                 </div>
             </div>
             <div class="box-container">
@@ -270,8 +273,8 @@
                         </div>
                         <p class="preco">R$ 20,00</p>
                     </div>
-                    <a href="#" class="btn add-carrinho" data-nome="Carne C/ Queijo"
-                    data-preco="20"> Adicionar ao carrinho </a>
+                    <a href="#" class="btn add-carrinho" data-nome="Carne C/ Queijo" data-preco="20"> Adicionar ao
+                        carrinho </a>
                 </div>
             </div>
             <div class="box-container">
@@ -286,8 +289,7 @@
                         </div>
                         <p class="preco">R$ 10,00</p>
                     </div>
-                    <a href="#" class="btn add-carrinho" data-nome="Tripo X"
-                    data-preco="10"> Adicionar ao carrinho </a>
+                    <a href="#" class="btn add-carrinho" data-nome="Tripo X" data-preco="10"> Adicionar ao carrinho </a>
                 </div>
             </div>
             <div class="box-container">
@@ -300,8 +302,8 @@
                         </div>
                         <p class="preco">R$ 21,00</p>
                     </div>
-                    <a href="#" class="btn add-carrinho" data-nome="4 Queijos"
-                    data-preco="21"> Adicionar ao carrinho </a>
+                    <a href="#" class="btn add-carrinho" data-nome="4 Queijos" data-preco="21"> Adicionar ao carrinho
+                    </a>
                 </div>
             </div>
         </div>
@@ -325,8 +327,8 @@
                     <p class="preco">R$26,99</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Pastel GG"
-                data-preco="26.99"> Adicionar ao carrinho </a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel GG" data-preco="26.99"> Adicionar ao carrinho
+                </a>
             </div>
 
             <div class="box">
@@ -344,8 +346,8 @@
                     <p class="preco">R$26,99</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Pastel LARICA"
-                data-preco="26.99"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel LARICA" data-preco="26.99"> Adicionar ao
+                    carrinho</a>
             </div>
 
             <div class="box">
@@ -363,8 +365,8 @@
                     <p class="preco">R$26,99</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Pastel Turbinado"
-                data-preco="26.99"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Pastel Turbinado" data-preco="26.99"> Adicionar ao
+                    carrinho</a>
             </div>
         </div>
         <p class="subtitulo">Regionais</p>
@@ -385,8 +387,8 @@
                     <p class="preco">R$23,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Escondidinho de carne do sol"
-                data-preco="23"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Escondidinho de carne do sol" data-preco="23"> Adicionar
+                    ao carrinho</a>
             </div>
 
             <div class="box">
@@ -403,8 +405,8 @@
                     <p class="preco">R$23,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Escondidinho de Bacalhau"
-                data-preco="23"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Escondidinho de Bacalhau" data-preco="23"> Adicionar ao
+                    carrinho</a>
             </div>
 
             <div class="box">
@@ -422,8 +424,8 @@
                     <p class="preco">R$24,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Bobo de camarão"
-                data-preco="24"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Bobo de camarão" data-preco="24"> Adicionar ao
+                    carrinho</a>
             </div>
 
             <div class="box">
@@ -441,8 +443,8 @@
                     <p class="preco">R$25,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="camarão chiclete"
-                data-preco="25"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="camarão chiclete" data-preco="25"> Adicionar ao
+                    carrinho</a>
             </div>
 
             <div class="box">
@@ -460,8 +462,7 @@
                     <p class="preco">R$25,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Nordestino"
-                data-preco="25"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Nordestino" data-preco="25"> Adicionar ao carrinho</a>
             </div>
 
             <div class="box">
@@ -479,8 +480,7 @@
                     <p class="preco">R$22,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="La Ele 3X"
-                data-preco="22"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="La Ele 3X" data-preco="22"> Adicionar ao carrinho</a>
             </div>
 
             <div class="box">
@@ -498,8 +498,7 @@
                     <p class="preco">R$23,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Misterioso"
-                data-preco="23"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Misterioso" data-preco="23"> Adicionar ao carrinho</a>
             </div>
 
             <div class="box">
@@ -517,8 +516,8 @@
                     <p class="preco">R$24,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Sabor Acarajé"
-                data-preco="24"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Sabor Acarajé" data-preco="24"> Adicionar ao
+                    carrinho</a>
             </div>
 
         </div>
@@ -539,8 +538,8 @@
                     <p class="preco">R$18,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Romeu e Julieta"
-                data-preco="18"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Romeu e Julieta" data-preco="18"> Adicionar ao
+                    carrinho</a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -557,8 +556,7 @@
                     <p class="preco">R$18,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Maria bonita"
-                data-preco="18"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Maria bonita" data-preco="18"> Adicionar ao carrinho</a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -575,8 +573,7 @@
                     <p class="preco">R$18,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Garoto"
-                data-preco="18"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Garoto" data-preco="18"> Adicionar ao carrinho</a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -593,8 +590,7 @@
                     <p class="preco">R$18,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="KitKat"
-                data-preco="18"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="KitKat" data-preco="18"> Adicionar ao carrinho</a>
             </div>
         </div>
         <p class="subtitulo">Bebidas</p>
@@ -615,8 +611,7 @@
                     <p class="preco">R$9,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Pepsi 1Lt"
-                data-preco="9"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Pepsi 1Lt" data-preco="9"> Adicionar ao carrinho</a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -633,8 +628,8 @@
                     <p class="preco">R$9,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Guarana Antartica 1Lt"
-                data-preco="9"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Guarana Antartica 1Lt" data-preco="9"> Adicionar ao
+                    carrinho</a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -651,8 +646,7 @@
                     <p class="preco">R$6,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Pepsi Lata"
-                data-preco="6"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Pepsi Lata" data-preco="6"> Adicionar ao carrinho</a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -669,8 +663,8 @@
                     <p class="preco">R$6,00</p>
                 </div>
 
-                <a href="#" class="btn add-carrinho" data-nome="Guarana Antartida Lata"
-                data-preco="6"> Adicionar ao carrinho</a>
+                <a href="#" class="btn add-carrinho" data-nome="Guarana Antartida Lata" data-preco="6"> Adicionar ao
+                    carrinho</a>
             </div>
         </div>
     </section>
@@ -711,31 +705,28 @@
         </div>
 
         <!-- MODAL DO CARRINHO -->
-<div id="modal-carrinho" class="modal-carrinho">
-    <div class="modal-conteudo">
-        <h2>🛒 Seu Carrinho</h2>
+        <div id="modal-carrinho" class="modal-carrinho">
+            <div class="modal-conteudo">
+                <h2>🛒 Seu Carrinho</h2>
 
-        <ul id="lista-carrinho"></ul>
+                <ul id="lista-carrinho"></ul>
 
-        <p class="total">
-            Total: R$ <span id="total-carrinho">0.00</span>
-        </p>
+                <p class="total">
+                    Total: R$ <span id="total-carrinho">0.00</span>
+                </p>
 
-        <textarea
-    id="observacoes"
-    placeholder="Observações do pedido (ex: sem cebola, bem passado, etc.)"
-    rows="3"
-></textarea>
+                <textarea id="observacoes" placeholder="Observações do pedido (ex: sem cebola, bem passado, etc.)"
+                    rows="3"></textarea>
 
 
-        <div class="acoes">
-            <button id="enviar-whatsapp" class="btn">Enviar pedido</button>
-            <button id="fechar-carrinho" class="btn btn-fechar">Fechar</button>
+                <div class="acoes">
+                    <button id="enviar-whatsapp" class="btn">Enviar pedido</button>
+                    <button id="fechar-carrinho" class="btn btn-fechar">Fechar</button>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div id="toast-carrinho">Item adicionado ao carrinho 🛒</div>
+        <div id="toast-carrinho">Item adicionado ao carrinho 🛒</div>
 
 
     </section>
