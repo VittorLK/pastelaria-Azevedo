@@ -178,7 +178,9 @@ document.addEventListener('DOMContentLoaded', () => {
             mensagem += `%0A%0A🧾 *Observações:*%0A${encodeURIComponent(observacoes.value)}`;
         }
 
-        const telefone = '557192537013';
+
+        
+        const telefone = '557192926042';
         const url = `https://wa.me/${telefone}?text=${mensagem}`;
 
         window.open(url, '_blank');
